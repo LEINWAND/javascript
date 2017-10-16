@@ -110,10 +110,15 @@ module.exports = {
 
     // Prefer destructuring from arrays and objects
     // http://eslint.org/docs/rules/prefer-destructuring
-    // TODO: enable
-    'prefer-destructuring': ['off', {
-      array: true,
-      object: true,
+    'prefer-destructuring': ['error', {
+      VariableDeclarator: {
+        array: false,
+        object: true,
+      },
+      AssignmentExpression: {
+        array: true,
+        object: true,
+      },
     }, {
       enforceForRenamedProperties: false,
     }],

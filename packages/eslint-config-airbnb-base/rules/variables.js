@@ -16,7 +16,7 @@ module.exports = {
     'no-label-var': 'error',
 
     // disallow specific globals
-    'no-restricted-globals': ['error'].concat(restrictedGlobals),
+    'no-restricted-globals': ['error', 'isFinite', 'isNaN'].concat(restrictedGlobals),
 
     // disallow declaration of variables already declared in the outer scope
     'no-shadow': 'error',
