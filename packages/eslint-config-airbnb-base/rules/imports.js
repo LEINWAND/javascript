@@ -37,7 +37,7 @@ module.exports = {
 
     // ensure named imports coupled with named exports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
-    'import/named': 'off',
+    'import/named': 'error',
 
     // ensure default import coupled with default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
@@ -204,5 +204,10 @@ module.exports = {
       allowLiteral: false,
       allowObject: false,
     }],
+
+    // This rule enforces that all exports are declared at the bottom of the file.
+    // https://github.com/benmosher/eslint-plugin-import/blob/98acd6afd04dcb6920b81330114e146dc8532ea4/docs/rules/exports-last.md
+    // TODO: enable?
+    'import/exports-last': 'off',
   },
 };
